@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0002308423.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>CaC Inmuebles</title>
+</head>
+<body>
+    <header>
+        <nav id="navigation" class="nav-bar">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <i class="fa-solid fa-key"></i>
+                </a>
+            </div>
+            <div class="button-box">
+                <div class="nav-section">
+                    <a href="#">Ventas</a>
+                    <a href="#">Alquileres</a>
+                </div>
+                <div class="nav-section">
+                    <a href="./pages/login.html">Iniciar sesión</a>
+                    <a href="./pages/register.html">Registrarse</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1 class="main-heading">CaC Inmuebles</h1>
+        <div class="search-tools main-content">
+            <aside id="filters" class="filters">
+                <h2>Filtros</h2>
+                <form action="#">
+                    <select name="property-type" class="filter-selector" id="property-type-selector">
+                        <option value="property-type" selected>Tipo de propiedad</option>
+                        <option value="house">Casa</option>
+                        <option value="apartment">Departamento</option>
+                        <option value="place-of-business">Local</option>
+                    </select>
+                    <select name="location" class="filter-selector" id="location-selector">
+                        <option value="location" selected>Localidad</option>
+                    </select>
+                    <select name="neighborhood" class="filter-selector" id="neighborhood-selector">
+                        <option value="neighborhood" selected>Barrio</option>
+                    </select>
+                    <select name="rooms" class="filter-selector" id="rooms-selector">
+                        <option value="rooms">Cantidad de ambientes</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="more-than-four">Más de cuatro</option>
+                    </select>
+                    <input type="submit" value="Aplicar" id="apply-filters-btn">
+                </form>
+            </aside>
+            <section id="results">
+                <div id="order-by-container">
+                    <select name="order_by" class="order-by-selector">
+                        <option value="default" selected>Ordenar por...</option>
+                        <option value="relevance">Relevancia</option>
+                        <option value="price-cheapest-first">Menor precio</option>
+                        <option value="price-expensive-first">Mayor precio</option>
+                    </select>
+                </div>
+                <div class="card" id="property-1">
+                    <a href="pages/detail.html">
+                        <img src="assets/img/casa1.jpg" alt="Imagen de la propiedad">
+                        <div class="details-overview">
+                            <p class="location">Location</p>
+                            <p class="price">Price: $$$</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card" id="property-2">
+                    <a href="pages/detail.html">
+                        <img src="assets/img/casa2.jpg" alt="Imagen de la propiedad">
+                        <div class="details-overview">
+                            <p class="location">Location</p>
+                            <p class="price">Price: $$$</p>
+                        </div>
+                    </a>  
+                </div>
+                <div class="card" id="property-3">
+                    <a href="pages/detail.html">
+                        <img src="assets/img/casa3.jpg" alt="Imagen de la propiedad">
+                        <div class="details-overview">
+                            <p class="location">Location</p>
+                            <p class="price">Price: $$$</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card" id="property-4">
+                    <a href="pages/detail.html">
+                        <img src="assets/img/casa4.jpg" alt="Imagen de la propiedad">
+                        <div class="details-overview">
+                            <p class="location">Location</p>
+                            <p class="price">Price: $$$</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card" id="property-5">
+                    <a href="pages/detail.html">
+                        <img src="assets/img/casa5.jpg" alt="Imagen de la propiedad">
+                        <div class="details-overview">
+                            <p class="location">Location</p>
+                            <p class="price">Price: $$$</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer id="footer" class="footer">        
+    </footer>
+</body>
+</html>

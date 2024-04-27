@@ -1,0 +1,69 @@
+* {
+    --font-color: rgb(21, 21, 21);
+    --main-color: rgb(255, 255, 255);
+    --secondary-color: rgb(116, 192, 252);
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: var(--font-color);
+    margin: 0;
+}
+
+body {
+    background-color: var(--main-color);
+}
+
+header {
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    justify-content: flex-start;
+    padding: 1vw;
+    gap: 3vw;
+}
+
+i {
+    font-size: 3vw;
+    color: var(--secondary-color);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vw;
+}
+
+#main-login-frame {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#main-login-frame h2 {
+    font-size: 2vw;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2vw;
+    gap: 2vw;
+}
+
+.login_register_input {
+    font-size: 1.2vw;
+    border-radius: 1vw;
+    border-style: solid;
+    border-color: var(--secondary-color);
+    padding: 0.2vw 1vw;
+}
+
+.form_button {
+    background-color: var(--secondary-color);
+    transition: all linear 0.1s;
+}
+
+.form_button:hover {
+    border-color: rgb(53, 141, 208);
+    background-color: rgb(53, 141, 208);
+    cursor: pointer;
+}
