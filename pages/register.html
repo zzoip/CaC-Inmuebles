@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0002308423.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <title>ZP - Registrarse</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html" id="header-logo">
+            <i class="fa-solid fa-key"></i>
+        </a>
+        <h1 id="main-heading">CaC Inmuebles</h1>
+    </header>
+    <main>
+        <section id="main-register-frame">
+            <h2>Registro</h2>
+            <hr>
+            <div id="form-body">
+                <form id="register-form" action="#">
+                    <input type="text" name="name" placeholder="Nombre" required class="login_register_input">
+                    <input type="text" name="surname" placeholder="Apellido" required class="login_register_input">
+                    <input type="email" name="mail" placeholder="email" required class="login_register_input">
+                    <input type="email" name="repeat-mail" placeholder="Repetir email" required class="login_register_input">
+                    <input type="password" name="password" placeholder="Contraseña" required class="login_register_input">
+                    <input type="password" name="repeat-password" placeholder="Repetir contraseña" required class="login_register_input">
+                    <div id="accept-terms-and-conditions">
+                        <input type="checkbox" name="terms-and-conditions" id="terms-and-conditions" required>
+                        <label for="terms-and-conditions">Acepto los <a href="./terms-and-conditions.html">términos y condiciones.</a></label>
+                    </div>
+                    <input type="submit" value="Registrarse" class="login_register_input form_button">
+                </form>
+                <p>¿Ya tienes una cuenta? <a href="./login.html">Inicia sesión</a></p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
