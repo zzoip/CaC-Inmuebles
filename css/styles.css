@@ -10,7 +10,6 @@
     --main-color: rgb(255, 255, 255);
     --secondary-color: rgb(116, 192, 252);
     font-family: "Poppins", sans-serif;
-    font-weight: 300;
     color: var(--font-color);
 }
 
@@ -18,54 +17,8 @@ body {
     background-color: var(--main-color);
 }
 
-.nav-bar {
-    background-color: rgb(235, 235, 235);
-    display: flex;
-    justify-content: center;
-    gap: 0.4vw 3vw;
-    padding: 1vw;
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    width: 100vw;
-    align-items: center;
-}
-
-#login-navigation {
-    justify-content: flex-start;
-}
-
-.nav-logo a {
-    display: inline-block;
-}
-
-.nav-logo i {
-    font-size: 3vw;
-    color: var(--secondary-color);
-}
-
-.button-box {
-    display: flex;
-    justify-content: space-between;
-    gap: 19vw;
-}
-
-.nav-section {
-    display: flex;
-    column-gap: 4vw;
-}
-
-.nav-section a {
-    font-size: 2vw;
-    padding: 0.5vw;
-    border-radius: 1vw;
-    text-decoration: none;
-    color: var(--font-color);
-    transition: all ease 0.2s;
-}
-
-.nav-section a:hover {
-    background-color: rgb(187, 187, 187);
+#registerNavButton {
+    background-color: var(--secondary-color);
 }
 
 main {
@@ -74,7 +27,7 @@ main {
     align-items: center;
     margin: 1vw;
     position: relative;
-    top: 22vh;
+    top: 16vh;
 }
 
 .main-heading {
@@ -133,6 +86,16 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 55vw;
+    gap: 3rem;
+}
+
+.form-check-input {
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: rgb(0, 161, 0);
+    border-color: rgb(0, 161, 0);
 }
 
 #order-by-container {
@@ -147,41 +110,15 @@ main {
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    border-color: var(--secondary-color);
-    border-style: solid;
-    border-width: 0.1vw;
-    border-radius: 1vw;
-    margin: 2vw 0;
-    height: 32vw;
-    width: 24vw;
-    cursor: pointer;
-    overflow: hidden;
+    transition: all linear 0.2s;
 }
 
-.card a {
-    height: 100%;
-}
-
-.card img {
-    position: relative;
-    z-index: -4;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.3s ease-in-out;
-    object-fit: cover;
-}
-
-.card:hover img {
+.card:hover {
     transform: scale(1.2);
 }
 
-.card .details-overview {
-    background-color: rgba(235, 235, 235, 0.8);
-    margin-bottom: 1vw;
-    padding: 0 0.5vw;
+.carousel-control-next, .carousel-control-prev {
+    background: rgba(80, 80, 80, 0.8);
 }
 
 @media screen and (max-width: 1000px) {

@@ -5,25 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/0002308423.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/fonts.css">
+    <link href="assets/libraries/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
     <title>CaC Inmuebles</title>
 </head>
 <body>
     <header>
-        <nav id="navigation" class="nav-bar">
-            <div class="nav-logo">
-                <a href="index.html">
-                    <i class="fa-solid fa-key"></i>
-                </a>
-            </div>
-            <div class="button-box">
-                <div class="nav-section">
-                    <a href="#">Ventas</a>
-                    <a href="#">Alquileres</a>
-                </div>
-                <div class="nav-section">
-                    <a href="./pages/login.html">Iniciar sesión</a>
-                    <a href="./pages/register.html">Registrarse</a>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+            <div class="container">
+
+                <a href="#" class="navbar-brand fs-2"><i class="fa-solid fa-key"></i> CaC Inmuebles</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header border-bottom">
+                        <h5 class="offcanvas-title fs-2" id="offcanvasNavbarLabel">Menu</h5>
+                        <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                            <li class="nav-item mx-2">
+                                <a href="#" class="nav-link active fs-4" aria-current="page">Ventas</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a href="#" class="nav-link fs-4">Alquileres</a>
+                            </li>
+                        </ul>
+                        <div class="d-flex justify-content-center align-items-center gap-3">
+                            <a href="pages/login.html" class="text-black fs-4">Iniciar sesión</a>
+                            <a href="pages/register.html" class="text-black text-decoration-none px-3 py-1 rounded-5 fs-4" id="registerNavButton">Registrarse</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -59,6 +72,11 @@
             </aside>
             <section id="results">
                 <div id="order-by-container">
+                    <p class="fs-2">ARS</p>
+                    <div class="form-check form-switch fs-2 d-flex justify-content-center">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+                    </div>
+                    <p class="fs-2">USD</p>
                     <select name="order_by" class="order-by-selector">
                         <option value="default" selected>Ordenar por...</option>
                         <option value="relevance">Relevancia</option>
@@ -66,55 +84,88 @@
                         <option value="price-expensive-first">Mayor precio</option>
                     </select>
                 </div>
-                <div class="card" id="property-1">
-                    <a href="pages/detail.html">
-                        <img src="assets/img/casa1.jpg" alt="Imagen de la propiedad">
-                        <div class="details-overview">
-                            <p class="location">Location</p>
-                            <p class="price">Price: $$$</p>
-                        </div>
-                    </a>
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/casa1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Breve descripción de la propiedad.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Ubicación</li>
+                        <li class="list-group-item">Ambientes</li>
+                        <li class="list-group-item property_price"><p class="currency">ARS</p><p class="property_price_amount"> 20000000</p></li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="pages/detail.html" class="card-link">Detalles</a>
+                    </div>
                 </div>
-                <div class="card" id="property-2">
-                    <a href="pages/detail.html">
-                        <img src="assets/img/casa2.jpg" alt="Imagen de la propiedad">
-                        <div class="details-overview">
-                            <p class="location">Location</p>
-                            <p class="price">Price: $$$</p>
-                        </div>
-                    </a>  
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/casa2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Ubicación</li>
+                        <li class="list-group-item">Ambientes</li>
+                        <li class="list-group-item property_price"><p class="currency">ARS</p><p class="property_price_amount"> 30000000</p></li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="pages/detail.html" class="card-link">Detalles</a>
+                    </div>
                 </div>
-                <div class="card" id="property-3">
-                    <a href="pages/detail.html">
-                        <img src="assets/img/casa3.jpg" alt="Imagen de la propiedad">
-                        <div class="details-overview">
-                            <p class="location">Location</p>
-                            <p class="price">Price: $$$</p>
-                        </div>
-                    </a>
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/casa3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Ubicación</li>
+                        <li class="list-group-item">Ambientes</li>
+                        <li class="list-group-item property_price"><p class="currency">ARS</p><p class="property_price_amount"> 40000000</p></li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="pages/detail.html" class="card-link">Detalles</a>
+                    </div>
                 </div>
-                <div class="card" id="property-4">
-                    <a href="pages/detail.html">
-                        <img src="assets/img/casa4.jpg" alt="Imagen de la propiedad">
-                        <div class="details-overview">
-                            <p class="location">Location</p>
-                            <p class="price">Price: $$$</p>
-                        </div>
-                    </a>
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/casa4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Ubicación</li>
+                        <li class="list-group-item">Ambientes</li>
+                        <li class="list-group-item property_price"><p class="currency">ARS</p><p class="property_price_amount"> 10000000</p></li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="pages/detail.html" class="card-link">Detalles</a>
+                    </div>
                 </div>
-                <div class="card" id="property-5">
-                    <a href="pages/detail.html">
-                        <img src="assets/img/casa5.jpg" alt="Imagen de la propiedad">
-                        <div class="details-overview">
-                            <p class="location">Location</p>
-                            <p class="price">Price: $$$</p>
-                        </div>
-                    </a>
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/casa5.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Ubicación</li>
+                        <li class="list-group-item">Ambientes</li>
+                        <li class="list-group-item property_price"><p class="currency">ARS</p><p class="property_price_amount"> 50000000</p></li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="pages/detail.html" class="card-link">Detalles</a>
+                    </div>
                 </div>
             </section>
         </div>
     </main>
     <footer id="footer" class="footer">        
     </footer>
+    <script src="js/convert-currency.js"></script>
+    <script src="js/nav-links.js"></script>
+    <script src="assets/libraries/bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 </html>
