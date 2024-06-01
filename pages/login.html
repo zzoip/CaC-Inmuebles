@@ -4,33 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/0002308423.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../assets/libraries/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../css/fonts.css">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <title>ZP Iniciar sesión</title>
 </head>
 <body>
     <header>
-        <a  href="../index.html" id="header-logo">
-            <i class="fa-solid fa-key"></i>
-        </a>
-        <h1 id="main-heading">CaC Inmuebles</h1>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+
+                <a href="../index.html" class="navbar-brand fs-2"><i class="fa-solid fa-key"></i> CaC Inmuebles</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header border-bottom">
+                        <h5 class="offcanvas-title fs-2" id="offcanvasNavbarLabel">Menu</h5>
+                        <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                            <li class="nav-item mx-2">
+                                <a href="#" class="nav-link active fs-4" aria-current="page">Ventas</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a href="#" class="nav-link fs-4">Alquileres</a>
+                            </li>
+                        </ul>
+                        <div class="d-flex justify-content-center align-items-center gap-3">
+                            <a href="login.html" class="text-black fs-4">Iniciar sesión</a>
+                            <a href="register.html" class="text-black text-decoration-none px-3 py-1 rounded-5 fs-4" id="registerNavButton">Registrarse</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
-        <section id="main-login-frame">
+        <section id="main-login-register-frame">
             <h2>Login</h2>
             <hr>
             <div id="form-body">
-                <form id="login-form" action="#">
-                    <input type="email" name="mail" placeholder="email" required class="login_register_input">
-                    <input type="password" name="password" placeholder="Contraseña" required class="login_register_input">
-                    <input type="submit" value="Iniciar sesión" class="login_register_input form_button">
+                <form id="login-register-form" action="#">
+                    <div>
+                        <input type="email" name="mail" placeholder="email" required class="login_register_input" id="email">
+                        <div class="error_text" id="email-error"></div>
+                    </div>
+                    <div>    
+                        <input type="password" name="password" placeholder="Contraseña" required class="login_register_input" id="password">
+                        <div class="error_text" id="password-error"></div>
+                    </div>
+                        <input type="submit" value="Iniciar sesión" class="login_register_input form_button">
                 </form>
-                <p>¿Aún no tienes una cuenta? <a href="./register.html">Regístrate</a></p>
+                <p>¿Aún no tienes una cuenta? <a href="register.html">Regístrate</a></p>
             </div>
         </section>
     </main>
     <footer>
 
     </footer>
+    <script src="../js/validate-login.js"></script>
+    <script src="../assets/libraries/bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 </html>

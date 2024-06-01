@@ -10,7 +10,7 @@ CURRENCY_CONVERTION_BTN.addEventListener('click', function(event) {
         .then(data => {
             let dollar_price = data['results'][1]['valor'];
             Array.from(prices_list).forEach(element => {
-                element.innerHTML = (parseFloat(element.innerHTML) * dollar_price).toFixed(2);
+                element.innerHTML = (parseFloat(element.innerHTML) * dollar_price).toFixed(0);
             });
             Array.from(currency_displays).forEach(element => {
                 element.innerHTML = "ARS"

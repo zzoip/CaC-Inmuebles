@@ -114,17 +114,17 @@ main {
     background: rgba(80, 80, 80, 0.8);
 }
 
-#main-register-frame {
+#main-login-register-frame {
     width: 25vw;
     display: flex;
     flex-direction: column;
 }
 
-#main-register-frame h2 {
+#main-login-register-frame h2 {
     font-size: 2vw;
 }
 
-#register-form {
+#login-register-form {
     display: flex;
     flex-direction: column;
     padding-top: 2vw;
@@ -151,6 +151,10 @@ main {
     cursor: pointer;
 }
 
+.error_text {
+    color: red;
+}
+
 @media screen and (max-width: 1330px) {
     .main-heading {
         font-size: 8vw;
@@ -168,7 +172,7 @@ main {
         width: 75vw;
     }
 
-    #main-register-frame
+    #main-login-register-frame
 
     .login_register_input {
         height: 4em;
