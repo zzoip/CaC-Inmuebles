@@ -17,6 +17,10 @@ body {
     background-color: var(--main-color);
 }
 
+nav {
+    background-color: rgba(203, 203, 203, 0.8);
+}
+
 #registerNavButton {
     background-color: var(--secondary-color);
 }
@@ -98,30 +102,60 @@ main {
     border-color: rgb(0, 161, 0);
 }
 
-#order-by-container {
-    height: fit-content;
-    width: 100%;
-    justify-content: end;
-    display: flex;
-}
-
-.order-by-selector {
-    margin: 0;
-}
-
 .card {
-    transition: all linear 0.2s;
+    transition: all linear 0.1s;
 }
 
 .card:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .carousel-control-next, .carousel-control-prev {
     background: rgba(80, 80, 80, 0.8);
 }
 
-@media screen and (max-width: 1000px) {
+#main-register-frame {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#main-register-frame h2 {
+    font-size: 2vw;
+}
+
+#register-form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2vw;
+    gap: 2vw;
+}
+
+.login_register_input {
+    border-width: 2px;
+    font-size: 1.2vw;
+    border-radius: 1vw;
+    border-style: solid;
+    border-color: var(--secondary-color);
+    padding: 0.2vw 1vw;
+}
+
+.form_button {
+    background-color: var(--secondary-color);
+    transition: all linear 0.1s;
+}
+
+.form_button:hover {
+    border-color: rgb(53, 141, 208);
+    background-color: rgb(53, 141, 208);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1330px) {
+    .main-heading {
+        font-size: 8vw;
+    }
+
     #search-tools {
         justify-content: space-between;
     }
@@ -134,7 +168,9 @@ main {
         width: 75vw;
     }
 
-    #results .card {
-        width: 32vw;
+    #main-register-frame
+
+    .login_register_input {
+        height: 4em;
     }
 }
